@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: blue-soft-voicedesk-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.14
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GRADIUM_API_KEY
+        sync: false
