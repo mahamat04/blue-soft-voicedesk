@@ -373,10 +373,8 @@ export default function Home() {
       try {
         await player.play();
       } catch {
-        URL.revokeObjectURL(audioUrl);
-        if (audioUrlRef.current === audioUrl) {
-          audioUrlRef.current = null;
-        }
+        // Keep the object URL and the audio element's src intact so the user
+        // can still press Play manually (the error message points them to it).
         if (autoListenRef.current) {
           setStatus("idle");
           setError(t.playAudio);
