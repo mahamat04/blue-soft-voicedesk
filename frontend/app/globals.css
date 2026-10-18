@@ -163,11 +163,11 @@ a {
 }
 
 .language-switch button {
-  min-width: 29px;
+  min-width: 34px;
   border: 0;
   border-radius: 999px;
   background: transparent;
-  padding: 6px 7px;
+  padding: 7px 9px;
   color: #8991a5;
   cursor: pointer;
   font-size: 8px;
@@ -1327,8 +1327,8 @@ a {
   }
 
   .language-switch button {
-    min-width: 25px;
-    padding-inline: 5px;
+    min-width: 30px;
+    padding-inline: 7px;
   }
 }
 
@@ -1345,51 +1345,61 @@ a {
 
 body,
 .site-shell {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.brand-name { font-size: 16px; }
-.nav-cta { font-size: 12px; }
-.site-nav nav { font-size: 14px; }
-.language-switch button { font-size: 9px; }
+.brand-name { font-size: 17px; }
+.nav-cta { font-size: 13px; }
+.site-nav nav { font-size: 15px; }
+.language-switch button { font-size: 12px; }
 .eyebrow,
-.section-kicker { font-size: 11px; }
-.hero-description { font-size: 13px; }
+.section-kicker { font-size: 12px; }
+.hero-description { font-size: 15px; line-height: 1.8; }
 .button-primary,
-.button-secondary { font-size: 12px; }
-.hero-proof p { font-size: 10px; }
-.assistant-label { font-size: 10px; }
-.assistant-name { font-size: 18px; }
-.assistant-role { font-size: 11px; }
-.voice-kicker { font-size: 9px; }
-.voice-status-text { font-size: 11px; }
-.assistant-card-foot { font-size: 10px; }
-.float-note b { font-size: 11px; }
-.float-note small { font-size: 9px; }
-.section-heading h2 { font-size: 26px; }
-.section-heading > p { font-size: 12px; }
-.tile-number { font-size: 10px; }
-.service-tile h3 { font-size: 13px; }
-.service-tile p { font-size: 11px; }
-.conversation-copy h2 { font-size: 28px; }
-.conversation-copy > p { font-size: 12px; }
-.conversation-points { font-size: 11px; }
-.chat-header > div:nth-child(2) b { font-size: 12px; }
+.button-secondary { font-size: 13px; }
+.hero-proof p { font-size: 12px; }
+.assistant-label { font-size: 11px; }
+.assistant-name { font-size: 19px; }
+.assistant-role { font-size: 12px; }
+.voice-kicker { font-size: 10px; }
+.voice-status-text { font-size: 12px; }
+.assistant-card-foot { font-size: 11px; }
+.float-note b { font-size: 12px; }
+.float-note small { font-size: 10px; }
+.section-heading h2 { font-size: 28px; }
+.section-heading > p { font-size: 14px; }
+.tile-number { font-size: 11px; }
+.service-tile h3 { font-size: 15px; }
+.service-tile p { font-size: 13px; }
+.conversation-copy h2 { font-size: 29px; }
+.conversation-copy > p { font-size: 14px; }
+.conversation-copy > .privacy-note { font-size: 12px; }
+.conversation-points { font-size: 13px; }
+.chat-header > div:nth-child(2) b { font-size: 13px; }
 .chat-header > div:nth-child(2) span,
-.chat-online { font-size: 10px; }
-.chat-message p { font-size: 11px; }
-.message-avatar { font-size: 10px; }
-.suggestion-label { font-size: 9px; }
-.suggestion-chip { font-size: 10px; }
-.typing-indicator { font-size: 10px; }
-.chat-error { font-size: 11px; }
-.chat-control-copy b { font-size: 11px; }
-.chat-control-copy span { font-size: 9px; }
-.stop-button { font-size: 10px; }
-.site-footer { font-size: 10px; }
-.site-footer .brand-name { font-size: 13px; }
+.chat-online { font-size: 11px; }
+.chat-message p { font-size: 13px; }
+.message-avatar { font-size: 11px; }
+.suggestion-label { font-size: 10px; }
+.suggestion-chip { font-size: 12px; }
+.typing-indicator { font-size: 11px; }
+.chat-error { font-size: 12px; }
+.chat-control-copy b { font-size: 13px; }
+.chat-control-copy span { font-size: 11px; }
+.stop-button { font-size: 12px; padding: 10px 14px; }
+.site-footer { font-size: 11px; }
+.site-footer .brand-name { font-size: 14px; }
+
+/* Larger, easier-to-tap primary controls. */
+.mic-button { width: 40px; height: 40px; flex: 0 0 40px; }
+.mic-button svg { width: 18px; height: 18px; }
+
+/* Hide the native audio player until a reply actually has audio to play. */
+.audio-player:not([src]) {
+  display: none;
+}
 
 @media (max-width: 680px) {
-  .section-heading h2 { font-size: 24px; }
-  .conversation-copy h2 { font-size: 24px; }
+  .section-heading h2 { font-size: 25px; }
+  .conversation-copy h2 { font-size: 25px; }
 }
