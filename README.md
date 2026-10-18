@@ -62,3 +62,15 @@ backend.
 - Configure health monitoring against `/health`; a `degraded` status means one
   or more required providers are not configured.
 
+## Vercel frontend and backend projects
+
+If the frontend and FastAPI backend are deployed as separate Vercel projects:
+
+1. Set the backend project's Root Directory to `backend` and deploy it.
+   Confirm `https://<backend-project>.vercel.app/health` returns a healthy
+   response.
+2. In the frontend Vercel project's Environment Variables, set `BACKEND_URL`
+   to `https://<backend-project>.vercel.app` (the base URL only, without
+   `/api`), for Production and Preview as needed.
+3. Redeploy the frontend after saving the variable. Environment-variable
+   changes do not apply retroactively to an existing deployment.
